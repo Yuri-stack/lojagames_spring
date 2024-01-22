@@ -24,7 +24,6 @@ public class Categoria {
 	private Long id;
 	
 	@NotNull(message = "Tipo é obrigatório!")
-	@Size(min = 5)
 	private String tipo;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria", cascade = CascadeType.ALL)

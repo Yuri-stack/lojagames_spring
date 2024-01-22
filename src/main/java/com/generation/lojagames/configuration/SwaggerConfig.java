@@ -1,4 +1,4 @@
-﻿package com.generation.lojagames.configuration;
+package com.generation.lojagames.configuration;
 
 import org.springdoc.core.customizers.OpenApiCustomizer;
 import org.springframework.context.annotation.Bean;

@@ -32,6 +32,9 @@ public class Produto {
 	
 	private String foto;
 
+	@Column(columnDefinition = "integer default 0")
+	private int curtir;
+
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
@@ -66,6 +69,14 @@ public class Produto {
 
 	public void setFoto(String foto) {
 		this.foto = foto;
+	}
+
+	public int getCurtir() {
+		return curtir;
+	}
+
+	public void setCurtir(int curtir) {
+		this.curtir = curtir;
 	}
 
 	public Categoria getCategoria() {

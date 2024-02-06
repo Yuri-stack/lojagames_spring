@@ -80,5 +80,12 @@ public class ProdutoController {
 				})
 				.orElse(ResponseEntity.notFound().build());
 	}
+
+	@PutMapping("curtir/{id}")
+	public ResponseEntity<Produto> curtir(@PathVariable Long id){
+		return produtoService.curtir(id)
+				.map(resposta -> ResponseEntity.ok(resposta))
+				.orElse(ResponseEntity.badRequest().build());
+	}
 	
 }

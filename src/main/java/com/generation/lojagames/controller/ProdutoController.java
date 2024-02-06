@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.generation.lojagames.model.Produto;
 import com.generation.lojagames.repository.CategoriaRepository;
 import com.generation.lojagames.repository.ProdutoRepository;
+import com.generation.lojagames.service.ProdutoService;
 
 import jakarta.validation.Valid;
 
@@ -26,6 +27,9 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 	
+	@Autowired
+	private ProdutoService produtoService;
+
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
